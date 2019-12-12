@@ -16,6 +16,7 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   Widget build(BuildContext context) {
+
     return BaseWidget<LoginViewModel>(
       model: LoginViewModel(
         authenticationService: Provider.of(context),

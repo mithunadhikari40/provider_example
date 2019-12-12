@@ -22,6 +22,7 @@ class Posts extends StatelessWidget {
           );
         } else {
           return ListView.builder(
+            shrinkWrap: true,
             itemCount: posts.length,
             itemBuilder: (BuildContext context, int index) {
               return PostListItem(

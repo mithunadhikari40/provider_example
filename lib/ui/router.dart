@@ -5,6 +5,7 @@ import 'package:provider_arc/core/models/post.dart';
 import 'package:provider_arc/ui/views/home_view.dart';
 import 'package:provider_arc/ui/views/login_view.dart';
 import 'package:provider_arc/ui/views/post_view.dart';
+import 'package:provider_arc/ui/widgets/postlist_item.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {

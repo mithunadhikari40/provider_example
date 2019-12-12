@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider_arc/core/models/post.dart';
+import 'package:provider_arc/ui/widgets/comments.dart';
 
 class PostListItem extends StatelessWidget {
   final Post post;
   final Function onTap;
-  const PostListItem({this.post, this.onTap});
+
+  const PostListItem({@required this.post, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +26,14 @@ class PostListItem extends StatelessWidget {
             ]),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text(post.title, style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16.0),),
-            Text(post.body, maxLines: 2, overflow: TextOverflow.ellipsis)
+            Text(
+              post.title,
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16.0),
+            ),
+            Text(post.body, maxLines: 2, overflow: TextOverflow.ellipsis),
+//            Comments(post.id),
           ],
         ),
       ),

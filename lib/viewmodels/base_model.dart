@@ -10,4 +10,11 @@ class BaseModel extends ChangeNotifier {
     _busy = value;
     notifyListeners();
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+
 }

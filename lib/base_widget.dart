@@ -9,12 +9,14 @@ class BaseWidget<T extends BaseModel> extends StatefulWidget {
 
   final Function(T) onModelReady;
 
-  BaseWidget({Key key, this.model, this.builder, this.child, this.onModelReady});
+  BaseWidget({Key key, this.model, this.builder, this.child, this.onModelReady})
+      : super(key: key);
+
   @override
   _BaseWidgetState<T> createState() => _BaseWidgetState<T>();
 }
 
-class _BaseWidgetState<T extends BaseModel> extends State<BaseWidget> {
+class _BaseWidgetState<T extends BaseModel> extends State<BaseWidget<T>> {
   // We want to store the instance of the model in the state
   // that way it stays constant through rebuilds
   T model;

@@ -8,7 +8,7 @@ class PostViewModel extends BaseModel {
 
   PostViewModel({@required Api api}) : _api = api;
 
-  List<Post> _posts;
+  List<Post> _posts =[];
 
   List<Post> get posts => List.from(_posts);
 
